@@ -28,10 +28,7 @@ class Telegrammbot(Bot):
         await self.bot.send_message(message.from_user.id, 'Hello. I am a robot that helps develop mathematical thinking. '
                                                           '\nI have two ways to train:'
                                                           '\n1. Arithmetic.'
-                                                          '\n2. Logic.'
-                                                          '\nIf you are ready to devote time to training for 15 minutes 2 times a day, then in 3 months you will see the result.'
-                                                          '\nTo support the project, we ask you to pay for a training subscription.'
-                                                          '\nPrice: 1 usd = 1 week.', parse_mode="Markdown")
+                                                          '\n2. Logic.', parse_mode="Markdown")
         await self.bot.send_message(message.chat.id, "Make a selection by clicking the button:", reply_markup = await self.main_keybard())
         wer = await self.vd.verify_user(user_id=message.from_user.id)
         print(wer)
