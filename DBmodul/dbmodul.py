@@ -61,12 +61,10 @@ class DbHelper():
 
     @command
     async def select_table(self, cursor):
-        cursor.execute('SELECT * FROM dogs_info')
+        cursor.execute('SELECT * FROM user_info')
         return await cursor.fetchall()
 
-    @command
-    async def delete_table_dogs_info(self, cursor):
-        await cursor.execute('DELETE FROM dogs_info')
+
 
 
 
